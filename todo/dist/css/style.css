@@ -1,3 +1,7 @@
+:root {
+  font-size: 62.5%;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -5,12 +9,77 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  color: #3498db;
-  font-size: 10px;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: normal;
 }
 
 h1 {
   font-size: 3rem;
   border-bottom: 1px solid #333;
+  margin-bottom: 3.2rem;
+  padding-bottom: 1rem;
+}
+
+.layout-container {
+  max-width: 97rem;
+  margin-inline: auto;
+  padding: 6rem;
+}
+
+.section.of-inputArea {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+[type=text], [type=date] {
+  appearance: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.form-textbox {
+  padding: 0.8rem 1.6rem;
+  display: inline-block;
+  border: 1px solid #333;
+  border-radius: 0.6rem;
+}
+.form-textbox:focus-within {
+  border: 1px solid #333;
+  outline: 1px solid #333;
+}
+.form-select {
+  padding: 0.6rem 1rem;
+  display: inline-block;
+  border: 1px solid #333;
+  border-radius: 0.6rem;
+}
+.form-select:focus-within {
+  border: 1px solid #333;
+  outline: 1px solid #333;
+}
+.form-date {
+  padding: 0.6rem 1rem;
+  display: inline-block;
+  border: 1px solid #333;
+  border-radius: 0.6rem;
+}
+.form-date:focus-within {
+  border: 1px solid #333;
+  outline: 1px solid #333;
+}
+.form-submit {
+  padding: 0.6rem 1.6rem;
+  display: inline-block;
+  border: 1px solid cadetblue;
+  color: #fff;
+  border-radius: 0.6rem;
+  background-color: cadetblue;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.form-submit:hover {
+  background-color: darkcyan;
 }

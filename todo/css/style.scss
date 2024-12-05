@@ -1,5 +1,9 @@
 @charset "utf-8";
-$primary-color: #3498db;
+$primary-color: #333;
+
+:root {
+    font-size: 62.5%;
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -8,13 +12,89 @@ $primary-color: #3498db;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     color: $primary-color;
-    font-size: 10px;
+    font-size: 1.6rem;
+    font-weight: normal;
 }
 
 
 h1 {
     font-size: 3rem;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid $primary-color;
+    margin-bottom: 3.2rem;
+    padding-bottom: 1rem;
+}
+
+.layout-container {
+    max-width: 97rem;
+    margin-inline: auto;
+    padding: 6rem;
+}
+
+.section {
+    &.of-inputArea {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+[type=text], [type=date] {
+    appearance: none;
+    border-radius: 0;
+    outline: none;
+}
+
+.form {
+    &-textbox {
+        padding: 0.8rem 1.6rem;
+        display: inline-block;
+        border: 1px solid $primary-color;
+        border-radius: 0.6rem;
+
+        &:focus-within {
+            border: 1px solid $primary-color;
+            outline: 1px solid $primary-color;
+        }
+    }
+
+    &-select {
+        padding: 0.6rem 1rem;
+        display: inline-block;
+        border: 1px solid $primary-color;
+        border-radius: 0.6rem;
+
+        &:focus-within {
+            border: 1px solid $primary-color;
+            outline: 1px solid $primary-color;
+        }
+    }
+
+    &-date {
+        padding: 0.6rem 1rem;
+        display: inline-block;
+        border: 1px solid $primary-color;
+        border-radius: 0.6rem;
+
+        &:focus-within {
+            border: 1px solid $primary-color;
+            outline: 1px solid $primary-color;
+        }
+    }
+
+    &-submit {
+        padding: 0.6rem 1.6rem;
+        display: inline-block;
+        border: 1px solid cadetblue;
+        color: #fff;
+        border-radius: 0.6rem;
+        background-color: cadetblue;
+        transition: all .2s;
+        cursor: pointer;
+
+        &:hover {
+            background-color:darkcyan;
+        }
+    }
 }

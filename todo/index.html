@@ -8,6 +8,29 @@
     <script src="js/index.js" defer></script>
 </head>
 <body>
-    <h1>やることリスト</h1>
+    <div class="layout-container">
+        <h1>やることリスト</h1>
+        <div class="section of-inputArea js-todo">
+            <div class="textInput">
+                <label for="textInput">やること</label>
+                <input type="text" name="textInput" id="textInput" class="form-textbox js-todo-textInput">
+            </div>
+            <div class="priority">
+                <label for="priority">優先度</label>
+                <select name="priority" id="priority" class="form-select js-todo-priority">
+                    <option value="high">High</option>
+                    <option value="middle">Middle</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <div class="deadline">
+                <label for="deadline">期日</label>
+                <input type="date" name="deadline" id="deadline" class="form-date js-todo-deadline">
+            </div>
+            <div class="submit">
+                <button type="submit" class="form-submit js-todo-submit">登録</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
