@@ -1,6 +1,20 @@
 @charset "utf-8";
+$primary-color: #3498db;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: $primary-color;
+    font-size: 10px;
+}
+
 
 h1 {
-    font-size: 3.6rem;
+    font-size: 3rem;
     border-bottom: 1px solid #333;
 }
