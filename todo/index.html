@@ -10,27 +10,44 @@
 <body>
     <div class="layout-container">
         <h1>やることリスト</h1>
-        <div class="section of-inputArea js-todo">
-            <div class="textInput">
-                <label for="textInput">やること</label>
-                <input type="text" name="textInput" id="textInput" class="form-textbox js-todo-textInput">
+        <div class="section">
+            <div class="sectionInputArea">
+                <div class="textInput">
+                    <label for="textInput">やること：</label>
+                    <input type="text" name="textInput" id="textInput" class="form-textbox js-todoList-inputText">
+                </div>
+                <div class="priority">
+                    <label for="priority">優先度：</label>
+                    <select name="priority" id="priority" class="form-select js-todoList-inputPriority" data-priority="1">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="deadline">
+                    <label for="deadline">期日：</label>
+                    <input type="date" name="deadline" id="deadline" class="form-date js-todoList-inputDeadline">
+                </div>
+                <div class="submit">
+                    <button type="submit" class="form-submit js-todoList-inputSubmit">登録</button>
+                </div>
             </div>
-            <div class="priority">
-                <label for="priority">優先度</label>
-                <select name="priority" id="priority" class="form-select js-todo-priority">
-                    <option value="high">High</option>
-                    <option value="middle">Middle</option>
-                    <option value="low">Low</option>
-                </select>
-            </div>
-            <div class="deadline">
-                <label for="deadline">期日</label>
-                <input type="date" name="deadline" id="deadline" class="form-date js-todo-deadline">
-            </div>
-            <div class="submit">
-                <button type="submit" class="form-submit js-todo-submit">登録</button>
+
+            <div class="sectionOutputArea">
+                <table class="table" aria-label="やることリスト一覧">
+                    <thead class="table-header">
+                        <tr class="table-row">
+                            <td class="cell"></td>
+                            <th class="cell">やること</th>
+                            <th class="cell">優先度 <button type="button" class="js-sortOrder-priorityButton">sort</button></th>
+                            <th class="cell">期日 <button type="button" class="js-sortOrder-deadlineButton">sort</button></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body js-todoList-container"></tbody>
+                </table>
             </div>
         </div>
     </div>
+
 </body>
 </html>

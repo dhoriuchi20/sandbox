@@ -1,5 +1,7 @@
 @charset "utf-8";
-$primary-color: #333;
+$color-baseBlack: #333;
+$color-primary: cadetblue;
+$color-secondary: darkcyan;
 
 :root {
     font-size: 62.5%;
@@ -13,15 +15,14 @@ $primary-color: #333;
 
 body {
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    color: $primary-color;
+    color: $color-baseBlack;
     font-size: 1.6rem;
     font-weight: normal;
 }
 
-
 h1 {
     font-size: 3rem;
-    border-bottom: 1px solid $primary-color;
+    border-bottom: 1px solid $color-baseBlack;
     margin-bottom: 3.2rem;
     padding-bottom: 1rem;
 }
@@ -32,12 +33,11 @@ h1 {
     padding: 6rem;
 }
 
-.section {
-    &.of-inputArea {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-    }
+.sectionInputArea {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 40px;
 }
 
 [type=text], [type=date] {
@@ -50,51 +50,111 @@ h1 {
     &-textbox {
         padding: 0.8rem 1.6rem;
         display: inline-block;
-        border: 1px solid $primary-color;
+        border: 1px solid $color-baseBlack;
         border-radius: 0.6rem;
 
         &:focus-within {
-            border: 1px solid $primary-color;
-            outline: 1px solid $primary-color;
+            border: 1px solid $color-baseBlack;
+            outline: 1px solid $color-baseBlack;
         }
     }
 
     &-select {
         padding: 0.6rem 1rem;
         display: inline-block;
-        border: 1px solid $primary-color;
+        border: 1px solid $color-baseBlack;
         border-radius: 0.6rem;
 
         &:focus-within {
-            border: 1px solid $primary-color;
-            outline: 1px solid $primary-color;
+            border: 1px solid $color-baseBlack;
+            outline: 1px solid $color-baseBlack;
         }
     }
 
     &-date {
         padding: 0.6rem 1rem;
         display: inline-block;
-        border: 1px solid $primary-color;
+        border: 1px solid $color-baseBlack;
         border-radius: 0.6rem;
 
         &:focus-within {
-            border: 1px solid $primary-color;
-            outline: 1px solid $primary-color;
+            border: 1px solid $color-baseBlack;
+            outline: 1px solid $color-baseBlack;
         }
     }
 
     &-submit {
-        padding: 0.6rem 1.6rem;
-        display: inline-block;
-        border: 1px solid cadetblue;
-        color: #fff;
-        border-radius: 0.6rem;
-        background-color: cadetblue;
-        transition: all .2s;
+        background-color: #93C5FD;
+        color: #1E40AF;
+        border: 1px solid #60A5FA;
+        border-radius: 5px;
+        padding: 0.4rem 1.6rem;
+        font-size: 16px;
         cursor: pointer;
+        transition: background-color 0.3s ease;
 
         &:hover {
-            background-color:darkcyan;
+            background-color: #BFDBFE;
         }
+    }
+}
+
+.table {
+    width: 100%;
+
+    &-header {
+        .cell {
+            font-weight: bold;
+            background-color: #F3F4F6;
+            border-bottom: 2px solid #D1D5DB;
+        }
+    }
+
+    &-row {
+        > td {
+            width: 60px;
+            text-align: center;
+        }
+    }
+}
+
+.cell {
+    vertical-align: middle;
+    padding: 12px;
+    border-bottom: 1px solid #E5E7EB;
+    text-align: center;
+
+    > label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    span {
+        text-indent: -9999px;
+        opacity: 0;
+    }
+
+    &:nth-child(2) {
+        text-align: left;
+    }
+
+    &:nth-child(3) {
+        width: 120px;
+    }
+
+    &:nth-child(4) {
+        width: 150px;
+    }
+}
+
+.table-row {
+    &:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    &:nth-child(even) {
+        background-color: #F9FAFB;
     }
 }
